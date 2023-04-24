@@ -1,0 +1,82 @@
+def imprime_oi():
+    print('oi')
+
+imprime_oi()
+
+def func_a():
+    print('A - começo')
+    func_b
+    print('A - fim')
+
+def func_b():
+    print('b')
+
+print('Teste')
+func_a()
+print('fim do programa')
+
+def imprime_coisas (a, b, c, d):
+    print(a)
+    print('-'*30)
+    print(b)
+    print('-'*30)
+    print(c)
+    print('-'*30)
+    print(d)
+    print('-'*30)
+
+def imprime_retangulo(altura:int, largura:int): #parâmetros
+    for i in range(altura):
+        linha = ""
+        for j in range(largura):
+        linha += '*'
+    print(linha)
+
+imprime_retangulo(5,10)  #argumentos
+
+def soma_listas(lista_1, lista_2):
+    if len(lista_1) != len(lista_2):
+        raise TypeError('listas tem que ter o mesmo tamanho') #para o programa, dá um erro que vc especifica
+    soma = []
+    tamanho = len(lista_1)
+    for i in range(tamanho):
+        soma.append(lista_1[i] + lista_2[i])
+    return soma
+
+A = [1, 2, 3, 4, 5]
+b = [50, 20, -10, 20, 40]
+
+resultado = soma_listas(A, B)
+#if resultado is None:
+    #print('lista com tamnhos diferentes')
+print(resultado)
+
+#imprimir os 1000 primeiros números primos
+
+def é_primo(n:int):
+    ''''diz se o número n é primo ou não
+        retorna False se o número não for primo
+        retorna True se o número for primo'''
+    for divisor in range(2, n):
+        if n % divisor == 0:
+            return False
+    return True
+
+def lista_primos(n:int):
+    numero_teste = 2
+    resultado = []
+    while n:
+        if é_primo(numero_teste):
+            print(numero_teste)
+            n -= 1
+        numero_teste += 1
+    return resultado
+
+primos = lista_primos(1000)
+for elemento in primos:
+    print(elemento)
+
+print(lista_primos(5))
+
+
+
